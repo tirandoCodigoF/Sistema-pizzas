@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
  			$_SESSION['user_id'] = (int) $user_id;
 
  			//$array_devolver['redirect'] = 'http://localhost:8080/codigos/PIZZAS/Vista/TipoUsuario/Administrador.php';
- 			$array_devolver['redirect']='http://localhost:8080/codigos/PIZZAS/Vista/login/Acceso.php';
+ 			$array_devolver['redirect']='http://localhost:8080/Sistema-pizzas/PIZZAS/Vista/login/Acceso.php';
 			 $array_devolver['is_login'] = true;
 			 $array_devolver['Registro exitoso']= true;
 

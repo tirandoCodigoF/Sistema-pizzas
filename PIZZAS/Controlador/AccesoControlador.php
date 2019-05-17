@@ -52,10 +52,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 		 	switch ($_SESSION['rol']) {
     				case 1:
-    						$array_devolver['redirect'] = 'http://localhost:8080/codigos/PIZZAS/Vista/TipoUsuario/Administrador.php';
+    						$array_devolver['redirect'] = 'http://localhost:8080/Sistema-pizzas/PIZZAS/Vista/TipoUsuario/Administrador.php';
     						break;
     				case 2:
-    						$array_devolver['redirect'] = 'http://localhost:8080/codigos/PIZZAS/Vista/TipoUsuario/Cliente.php';
+    						$array_devolver['redirect'] = 'http://localhost:8080/Sistema-pizzas/PIZZAS/Vista/TipoUsuario/Cliente.php';
     						break;
     		
     				default:
@@ -67,7 +67,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 				 			$array_devolver['error']='Los datos no son validos.';
 	}
 }else{
-							$array_devolver['error']="La cuenta no existe. <a href='http://localhost:8080/codigos/PIZZAS/Vista/login/Registro.php'><b>Crear Cuenta</b></a>";
+							$array_devolver['error']="La cuenta no existe. <a href='http://localhost:8080/Sistema-pizzas/PIZZAS/Vista/login/Registro.php'><b>Crear Cuenta</b></a>";
 }
 							echo json_encode($array_devolver);
 } }
