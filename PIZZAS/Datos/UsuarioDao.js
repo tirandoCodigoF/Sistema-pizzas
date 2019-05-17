@@ -36,7 +36,7 @@ $(document).on("submit", ".formulario_registro", function(event){
 
 
     $("#msg_error").hide();
-    var url_php = 'http://localhost:8080/codigos/PIZZAS/Controlador/RegistroControlador.php';
+    var url_php = 'http://localhost:8080/Sistema-pizzas/PIZZAS/Controlador/RegistroControlador.php';
 
     $.ajax({
         type:'POST',
@@ -81,7 +81,7 @@ $(document).on("submit", ".formulario_acceso", function(event){
         return false;   
     }
     $("#msg_error").hide();
-    var url_php = 'http://localhost:8080/codigos/PIZZAS/Controlador/AccesoControlador.php';
+    var url_php = 'http://localhost:8080/Sistema-pizzas/PIZZAS/Controlador/AccesoControlador.php';
 
     $.ajax({
         type:'POST',

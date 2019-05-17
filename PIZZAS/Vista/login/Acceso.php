@@ -60,12 +60,12 @@
 
                                   switch ($_SESSION['rol']) {
                                     case 1:
-                                     header('location: http://localhost:8080/codigos/PIZZAS/Vista/TipoUsuario/Administrador.php');
+                                     header('location: http://localhost:8080/Sistema-pizzas/PIZZAS/Vista/TipoUsuario/Administrador.php');
                                      echo "hola2";
                                         //$array_devolver['redirect'] = 'http://localhost:8080/codigos/PIZZAS/Vista/TipoUsuario/Administrador.php';
                                         break;
                                     case 2:
-                                    header('location: http://localhost:8080/codigos/PIZZAS/Vista/TipoUsuario/Cliente.php');
+                                    header('location: http://localhost:8080/Sistema-pizzas/PIZZAS/Vista/TipoUsuario/Cliente.php');
                                         echo "hola3";
                                         //$array_devolver['redirect'] = 'http://localhost:8080/codigos/PIZZAS/Vista/TipoUsuario/Cliente.php';
                                         break;
