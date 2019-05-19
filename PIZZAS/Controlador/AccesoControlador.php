@@ -39,7 +39,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 			$usuario_id = (int) $usuario['user_id'];
 			$usuario_tipo= (int) $usuario['fk_tipo'];
 			$usuario_nom= $usuario['nombre'];
-			$usuario_ap= $usuario['apellido'];
+			$usuario_ap= $usuario['apellidos'];
 
 		//$usuario_id= (int) $usuario['fk_tipo']==1;
 			$hash = (string) $usuario['password'];
