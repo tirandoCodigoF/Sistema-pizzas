@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$array_devolver['is_login']=false;
 		}else{
 	$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-	$query="INSERT INTO usuario (email, password, nombre, apellido, edad, sexo, telefono, direccion, ciudad, estado, fk_tipo) VALUES (:email, :password, :nombre, :apellido, :edad, :sexo,:telefono ,:direccion,:ciudad, :estado, :tipo)";
+	$query="INSERT INTO usuario (email, password, nombre, apellidos, edad, sexo, telefono, direccion, ciudad, estado, fk_tipo) VALUES (:email, :password, :nombre, :apellido, :edad, :sexo,:telefono ,:direccion,:ciudad, :estado, :tipo)";
 
 	$nusuario = $con->prepare($query);
 	$nusuario -> bindParam(':email', $email, PDO::PARAM_STR);
