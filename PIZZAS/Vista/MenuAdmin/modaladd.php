@@ -99,6 +99,16 @@
             <label>Contraseña: </label>
             <input type="password" name="password" autofocus require placeholder="********" class="form-control">
           </div>
+          <div class="form-group">
+          <label>Privilegio: </label>
+           <select name="priv" id="priv" class="form-control" required require>
+           <option selected>Seleccionar</option>
+            <option value="1">Administrador</option>
+           <option value="2">Vendedor</option>
+           <option value="3">Cliente</option>
+           </select>
+          </div>
+
            </div>
            </div>
            </div>
