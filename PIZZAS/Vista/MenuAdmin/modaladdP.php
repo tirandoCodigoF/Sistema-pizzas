@@ -2,12 +2,12 @@
  require_once '../../Datos/Conne.php';
 
  ?>
-<!-- MODAL AGREGAR USUARIOS..........-->
+
 <!-- Button trigger modal -->
 <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">hola
 </button>-->
 <!-- Modal -->
-<div class="modal fade" id="addusuarios" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -132,103 +132,4 @@
     </div>
   </div>
 </div>
-
-<!-- MODAL AGREGAR PIZZA..........-->
-<div class="modal fade" id="addpizzas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-center" id="exampleModalLabel"><B>AGREGAR PIZZA</B></h5>
-        <button type="button" class="close"  data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      
-<div class="container">
-  <div class="row d-flex justify-content-around mt-1">
-
-    <div class="card cold-md-6 cold-md-offset-6">
-      <article class="card-body">
-      
-        <div id="msg_error" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
-       
-        <form action="POST" class="formulario_pizzas">
-         <div class="form-group">
-          <div class="row">
-                <div class="col-md-12">
-                <div class="row">
-                <div class="col-md-4">
-            <div class="form-group">
-            <label>imagen: </label>
-            <input type="file" name="img" id="img" class="form-control"  autofocus placeholder="imagen de la pizza" required require onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]{4,30}" title="No puede ingresar Caracteres especiales (*/&.@-%!$#''?¿¨´+*[]{}_;:) etc, minimo 4, maximo 30 letras" maxlength="30">
-             </div> 
-            <div class="form-group">
-            <label>Nombre: </label>
-            <input type="text" name="nombrep" id="nombrep" class="form-control" autofocus placeholder="Nombre de la pizza" required require  onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]{4,30}" title="No puede ingresar Caracteres especiales (*/&.@-%!$#''?¿¨´+*[]{}_;:) etc, minimo 4, maximo 30 letras"  maxlength="30">
-          </div> 
-          
-          </div>
-          <div class="col-md-4">
-            
-            
-           <div class="form-group">
-            <label>Ingredientes: </label>
-            <input type="text" name="ingredientes" id="ingredientes" class="form-control" autofocus placeholder="Ingredientes" required require pattern="[0-9]{3}[0-9]{7}" title="Formato correcto (953)-121-54-12,No puede ingresar Caracteres especiales (*/&.@-,%!) etc, Se requieren 10 digitos" minlength="10" maxlength="10">
-          </div> 
-         
-          <div class="form-group">
-            <label>Descripcion: </label>
-            <input type="text" name="descrip" id="descrip" class="form-control" autofocus placeholder="Descripcion" required require onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]*.{20,100}" title="Ingresa tu direccion completa: calle, numero, colonia" maxlength="100">
-  
-          </div> 
-      
-          </div>
-          <div class="col-md-4">
-          <div class="form-group">
-            <label>Tamaño: </label>
-           <select name="sexo" id="sexo" class="form-control" required require>
-           <option selected>Seleccionar</option>
-            <option value="1">Pequeña</option>
-           <option value="2">Mediana</option>
-           <option value="3">Grande</option>
-           <option value="4">Extragrande</option>
-           <option value="5">Familiar</option>
-           </select>
-          
-          </div>  
-          <div class="form-group">
-            <label>Costo: </label>
-
-                 </div>
-
-           </div>
-           </div>
-           </div>
-            </div>
-            <br>
-          <div class="form-group" align="center">
-            <!--<button type="submit"  class="btn btn-success">Registrar</button>-->
-           
-        <button type="submit" class="btn btn-success">Registrar</button>
-        <button type="submit" class="btn btn-danger" data-dismiss="modal">Close</button>
-
-     
-          </div>
-        </form>   
-      </article>
-    </div>
-  </div>
-</div>
-      </div>
-     
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
 <?php include_once '../navar/footer.php'; ?>

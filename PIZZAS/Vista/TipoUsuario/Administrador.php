@@ -30,9 +30,9 @@
             </div>
         </div>
     </div>
-    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">Agregar Usuarios
+    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#addusuarios">Agregar Usuarios
 </button>
-<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">Agregar Pizza
+<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#addpizzas">Agregar Pizza
 </button>
 
     <?php include_once '../navar/footer.php'; ?>

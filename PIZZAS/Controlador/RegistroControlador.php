@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$direccion= $_POST['direccion'];
 	$ciudad= $_POST['ciudad'];
 	$estado= $_POST['estado'];
-	$fk_tipo= 1;
+	$fk_tipo= $_POST['priv'];
 
 	//comprobar si existe el usuario
 	$query=" SELECT * FROM usuario WHERE email='$email' LIMIT 1";

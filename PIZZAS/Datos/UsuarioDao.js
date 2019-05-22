@@ -12,7 +12,7 @@ $(document).on("submit", ".formulario_registro", function(event){
         direccion: $("#direccion",$form).val(),
         ciudad: $("#ciudad",$form).val(),
         estado: $("#estado",$form).val(),
-       
+        priv: $("#priv",$form).val(),
         email: $("input[type='email']",$form).val(),
         password: $("input[type='password']", $form).val() 
     }
