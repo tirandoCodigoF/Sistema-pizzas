@@ -2,6 +2,7 @@
 		include_once '../navar/navar.php';
         include_once '../../Datos/Conne.php';
         require '../../Controlador/SegAdmin.php';
+        include_once '../MenuAdmin/modaladd.php';
  ?>
 
 
@@ -29,6 +30,11 @@
             </div>
         </div>
     </div>
+    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">Agregar Usuarios
+</button>
+<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">Agregar Pizza
+</button>
+
     <?php include_once '../navar/footer.php'; ?>
 </body>
 </html>

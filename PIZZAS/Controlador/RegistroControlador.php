@@ -21,11 +21,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$resultado->bindParam(':email',$email,PDO::PARAM_STR);
 	$resultado->execute();
 
+	$query2=" SELECT * FROM usuario WHERE telefono='$telefono' LIMIT 1";
+	$resultado2 = $con -> prepare($query2);
+	$resultado2->bindParam(':telefono',$telefono,PDO::PARAM_STR);
+	$resultado2->execute();
 	//si hay regsitro en la bdd
 	if ($resultado->rowCount() == 1) {
 		$array_devolver['error']="Este correo ya existe";
 		$array_devolver['is_login']=false;
-		}else{
+		}elseif ($resultado2->rowCount() == 1) {
+			$array_devolver['error']="el numero de telefono ya existe intente con uno nuevo";
+			$array_devolver['is_login']=false;
+		}
+		else{
 	$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 	$query="INSERT INTO usuario (email, password, nombre, apellidos, edad, sexo, telefono, direccion, ciudad, estado, fk_tipo) VALUES (:email, :password, :nombre, :apellido, :edad, :sexo,:telefono ,:direccion,:ciudad, :estado, :tipo)";
 
