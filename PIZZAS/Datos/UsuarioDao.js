@@ -65,6 +65,58 @@ $(document).on("submit", ".formulario_registro", function(event){
     return false;
 });
 
+
+
+$(document).on("submit", ".formulario_pizzas", function(event){
+    event.preventDefault();
+    var $form = $(this);
+  
+  // $telf="/^[953]+[0-9]{7}$/";
+    var data_form = {
+        imagen:$("#imagen", $form).val(),
+        nombre: $("#nombrep",$form).val(),
+       
+    ingredientes: $("#ingredientes",$form).val(),
+        descripcion:$("#descripcion", $form).val(),
+        tamaño:$("#tamaño",$form).val(),
+        precio: $("#precio",$form).val(),
+         }
+    
+    $("#msg_error").hide();
+    var url_php = 'http://localhost:8080/Sistema-pizzas/PIZZAS/Controlador/PizzaControlador.php';
+
+    $.ajax({
+        type:'POST',
+        url: url_php,
+        data: data_form,
+        data: FormData,
+        dataType: 'json',
+        async: true,
+    })
+    .done(function ajaxDone(res){
+       console.log(res); 
+       if(res.error !== undefined){
+            $("#msg_error").text(res.error).show();
+            return false;
+       } 
+
+       if(res.redirect !== undefined){
+        window.location = res.redirect;
+    }
+    })
+    .fail(function ajaxError(e){
+        console.log(e);
+    })
+    .always(function ajaxSiempre(){
+        console.log('Final de la llamada ajax.');
+    })
+    return false;
+});
+
+
+
+
+
 $(document).on("submit", ".formulario_acceso", function(event){
     event.preventDefault();
     var $form = $(this);

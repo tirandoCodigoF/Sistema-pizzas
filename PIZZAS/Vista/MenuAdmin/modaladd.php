@@ -97,7 +97,7 @@
           </div>  
           <div class="form-group">
             <label>Contraseña: </label>
-            <input type="password" name="password" autofocus require placeholder="********" class="form-control">
+            <input type="password" name="password" autocomplete="cc-number" autofocus require placeholder="********" class="form-control">
           </div>
           <div class="form-group">
           <label>Privilegio: </label>
@@ -153,7 +153,7 @@
       
         <div id="msg_error" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
        
-        <form action="POST" class="formulario_pizzas">
+        <form action="POST" class="formulario_pizzas" enctype="multipart/form-data">
          <div class="form-group">
           <div class="row">
                 <div class="col-md-12">
@@ -161,7 +161,7 @@
                 <div class="col-md-4">
             <div class="form-group">
             <label>imagen: </label>
-            <input type="file" name="img" id="img" class="form-control"  autofocus placeholder="imagen de la pizza" required require onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]{4,30}" title="No puede ingresar Caracteres especiales (*/&.@-%!$#''?¿¨´+*[]{}_;:) etc, minimo 4, maximo 30 letras" maxlength="30">
+            <input type="file" name="imagen" id="imagen" class="form-control"  autofocus placeholder="imagen de la pizza" required require onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]{4,30}" title="No puede ingresar Caracteres especiales (*/&.@-%!$#''?¿¨´+*[]{}_;:) etc, minimo 4, maximo 30 letras" maxlength="30">
              </div> 
             <div class="form-group">
             <label>Nombre: </label>
@@ -187,7 +187,7 @@
           <div class="col-md-4">
           <div class="form-group">
             <label>Tamaño: </label>
-           <select name="sexo" id="sexo" class="form-control" required require>
+           <select name="tamaño" id="tamaño" class="form-control" required require>
            <option selected>Seleccionar</option>
             <option value="1">Pequeña</option>
            <option value="2">Mediana</option>
@@ -199,7 +199,16 @@
           </div>  
           <div class="form-group">
             <label>Costo: </label>
+            <select name="precio" id="precio">
+            <?php 
+            $query ="SELECT * FROM preciopizza";
+            $consulta= $con->prepare($query);
+            $consulta->execute();
+             foreach ($consulta as $fin) {
+               echo "<option selected value=".$fin[0].">".$fin[1]."</option>";
+             } ?>
 
+           </select>
                  </div>
 
            </div>
